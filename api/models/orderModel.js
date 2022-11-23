@@ -109,7 +109,7 @@ const orderSchema = new mongoose.Schema({
   orderStatus: {
     type: String,
     required: true,
-    default: "Processing",
+    default: "Đang xử lý",
   },
   dateFind: {
     type: String,

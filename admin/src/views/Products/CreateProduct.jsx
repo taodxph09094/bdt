@@ -63,12 +63,17 @@ const CreateProduct = ({ history }) => {
     setBudget(totalAmount - importPrice * Stock);
   });
   const categories = [
-    "Điện thoại",
-    "Máy tính bản",
-    "Đồng hồ",
-    "Tai nghe",
-    "Phụ kiện",
-    "Laptop",
+    "Apple",
+    "Samsung",
+    "Xiaomi Redmi",
+    "Realmi",
+    "Huawei",
+    "OPPO",
+    "Vivo",
+    "Nokia",
+    "ASUS",
+    "Sony",
+    "OnePlus",
   ];
   useEffect(() => {
     if (error) {

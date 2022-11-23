@@ -60,7 +60,8 @@ const OrderDetailCash = ({ history, match }) => {
         <div
           className="confirmOrderPage"
           style={{
-            display: orderSystem.orderStatus === "Delivered" ? "block" : "grid",
+            display:
+              orderSystem.orderStatus === "Đã hoàn thành" ? "block" : "grid",
           }}
         >
           <div>
@@ -147,7 +148,9 @@ const OrderDetailCash = ({ history, match }) => {
             <div
               style={{
                 display:
-                  orderSystem.orderStatus === "Delivered" ? "none" : "block",
+                  orderSystem.orderStatus === "Đã hoàn thành"
+                    ? "none"
+                    : "block",
               }}
             >
               <form
@@ -159,12 +162,11 @@ const OrderDetailCash = ({ history, match }) => {
                   <AccountTreeIcon />
                   <select onChange={(e) => setStatus(e.target.value)}>
                     <option value="">Chọn trạng thái</option>
-                    {orderSystem.orderStatus === "Processing" && (
-                      <option value="Shipped">Shipped</option>
+                    {orderSystem.orderStatus === "Đang xử lý" && (
+                      <option value="Đang giao">Shipped</option>
                     )}
-
-                    {orderSystem.orderStatus === "Shipped" && (
-                      <option value="Delivered">Delivered</option>
+                    {orderSystem.orderStatus === "Đang giao" && (
+                      <option value="Đã hoàn thành">Delivered</option>
                     )}
                   </select>
                 </div>

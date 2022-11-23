@@ -65,7 +65,8 @@ const OrderDetail = ({ history, match }) => {
             <div
               className="confirmOrderPage"
               style={{
-                display: order.orderStatus === "Delivered" ? "block" : "grid",
+                display:
+                  order.orderStatus === "Đã hoàn thành" ? "block" : "grid",
               }}
             >
               <div>
@@ -96,7 +97,8 @@ const OrderDetail = ({ history, match }) => {
                     <div className="confirmshippingAreaBox">
                       <p
                         className={
-                          order.orderStatus && order.orderStatus === "Delivered"
+                          order.orderStatus &&
+                          order.orderStatus === "Đã hoàn thành"
                             ? "greenColor"
                             : "redColor"
                         }
@@ -117,8 +119,8 @@ const OrderDetail = ({ history, match }) => {
                         >
                           {order.paymentInfo &&
                           order.paymentInfo.status === "succeeded"
-                            ? "PAID"
-                            : "NOT PAID"}
+                            ? "Đã thanh toán"
+                            : "Chưa thanh toán"}
                         </p>
                       </div>
                     </div>
@@ -177,7 +179,7 @@ const OrderDetail = ({ history, match }) => {
                 <div
                   style={{
                     display:
-                      order.orderStatus === "Delivered" ? "none" : "block",
+                      order.orderStatus === "Đã hoàn thành" ? "none" : "block",
                   }}
                 >
                   <form
@@ -189,12 +191,12 @@ const OrderDetail = ({ history, match }) => {
                       <AccountTreeIcon />
                       <select onChange={(e) => setStatus(e.target.value)}>
                         <option value="">Chọn trạng thái</option>
-                        {order.orderStatus === "Processing" && (
-                          <option value="Shipped">Shipped</option>
+                        {order.orderStatus === "Đang xử lý" && (
+                          <option value="Đang giao">Đang giao</option>
                         )}
 
-                        {order.orderStatus === "Shipped" && (
-                          <option value="Delivered">Delivered</option>
+                        {order.orderStatus === "Đang giao" && (
+                          <option value="Đã hoàn thành">Đã hoàn thành</option>
                         )}
                       </select>
                     </div>

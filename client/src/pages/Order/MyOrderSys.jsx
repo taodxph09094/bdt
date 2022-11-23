@@ -27,7 +27,7 @@ const MyOrderSys = () => {
       minWidth: 100,
       flex: 0.5,
       cellClassName: (params) => {
-        return params.getValue(params.id, "status") === "Đã giao hàng"
+        return params.getValue(params.id, "status") === "Đã hoàn thành"
           ? "greenColor"
           : "redColor";
       },

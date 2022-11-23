@@ -101,7 +101,13 @@ const OrderDetails = ({ match }) => {
 
                     <div>
                       <p>Giá :</p>
-                      <span>$ {order.totalPrice && order.totalPrice}</span>
+                      <span>
+                        {" "}
+                        {new Intl.NumberFormat("vi-VN", {
+                          style: "currency",
+                          currency: "VND",
+                        }).format(order.totalPrice * 23000)}
+                      </span>
                     </div>
                   </div>
 
@@ -111,7 +117,7 @@ const OrderDetails = ({ match }) => {
                       <p
                         className={
                           order.orderStatus &&
-                          order.orderStatus === "Đã giao hàng"
+                          order.orderStatus === "Đã hoàn thành"
                             ? "greenColor"
                             : "redColor"
                         }

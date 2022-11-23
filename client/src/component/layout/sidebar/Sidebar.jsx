@@ -4,17 +4,17 @@ import Search from "../../Product/Search";
 import { Link, useHistory } from "react-router-dom";
 
 const categories = [
-  "Điện thoại",
-  "Laptop",
-  "Máy tính bảng",
-  "Tai nghe",
-  "Loa",
-  "Đồng hồ",
-  "Phụ kiện",
-  "Màn hình",
-  "PC",
-  "Thu cũ",
-  "Hàng cũ",
+  "Apple",
+  "Samsung",
+  "Xiaomi Redmi",
+  "Realmi",
+  "Huawei",
+  "OPPO",
+  "Vivo",
+  "Nokia",
+  "ASUS",
+  "Sony",
+  "OnePlus",
 ];
 const Sidebar = ({ match }) => {
   const [keyword, setKeyword] = useState("");
@@ -42,37 +42,37 @@ const Sidebar = ({ match }) => {
               </div>
               <ul>
                 <li>
-                  <Link to="#">Điện thoại</Link>
+                  <Link to="#">Applei</Link>
                 </li>
                 <li>
-                  <Link to="#">Laptop</Link>
+                  <Link to="#">Samsung</Link>
                 </li>
                 <li>
-                  <Link to="#">Máy tính bảng</Link>
+                  <Link to="#">Xiaomi Redmi</Link>
                 </li>
                 <li>
-                  <Link to="#">Tai nghe</Link>
+                  <Link to="#">Realmi</Link>
                 </li>
                 <li>
-                  <Link to="#">Loa</Link>
+                  <Link to="#">Huawei</Link>
                 </li>
                 <li>
-                  <Link to="#">Đồng hồ</Link>
+                  <Link to="#">OPPO</Link>
                 </li>
                 <li>
-                  <Link to="#">Phụ kiện</Link>
+                  <Link to="#">Vivo</Link>
                 </li>
                 <li>
-                  <Link to="#">Màn hình</Link>
+                  <Link to="#">Nokia</Link>
                 </li>
                 <li>
-                  <Link to="#">PC</Link>
+                  <Link to="#">ASUS</Link>
                 </li>
                 <li>
-                  <Link to="#">Thu cũ</Link>
+                  <Link to="#">Sony</Link>
                 </li>
                 <li>
-                  <Link to="#">Hàng cũ</Link>
+                  <Link to="#">OnePlus</Link>
                 </li>
               </ul>
             </div>

@@ -1,3 +1,11 @@
+.priceHhh{
+	margin-top: 15px !important;
+}
+.bullStore{
+	width: 100px;
+	height: 100px;
+	margin-bottom: 15px;
+}
 .chooseColorRow{
 	flex-direction: row;
     margin-top: 5px;

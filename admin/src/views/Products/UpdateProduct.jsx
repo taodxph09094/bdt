@@ -24,11 +24,16 @@ import {
 import { UPDATE_PRODUCT_RESET } from "../../constants/productConstants";
 import { formatCurrency } from "../../utils/helper";
 import { getBrand } from "../../actions/brandAction";
+import {
+  createStatistical,
+  getAdminStatistical,
+} from "../../actions/statisticalAction";
 const UpdateProduct = ({ history, match }) => {
   const dispatch = useDispatch();
   const alert = useAlert();
 
   const { error, product } = useSelector((state) => state.productDetails);
+  const { statisticals } = useSelector((state) => state.statisticals);
   const {
     loading,
     error: updateError,
@@ -45,19 +50,35 @@ const UpdateProduct = ({ history, match }) => {
   const [company, setCompany] = useState("");
   const [supplier, setSupplier] = useState([]);
   const [Stock, setStock] = useState();
+  const [budget, setBudget] = useState();
   const [images, setImages] = useState([]);
+  const [importPrice, setImportPrice] = useState("");
   const [oldImages, setOldImages] = useState([]);
   const [imagesPreview, setImagesPreview] = useState([]);
   useEffect(() => {
+    dispatch(getAdminStatistical());
     dispatch(getBrand());
   }, [dispatch, alert, history]);
+  let totalAmount = 0;
+  statisticals &&
+    statisticals.forEach((item) => {
+      totalAmount += item.budget;
+    });
+  useEffect(() => {
+    setBudget(totalAmount - importPrice * Stock);
+  });
   const categories = [
-    "Điện thoại",
-    "Máy tính bản",
-    "Đồng hồ",
-    "Tai nghe",
-    "Phụ kiện",
-    "Laptop",
+    "Apple",
+    "Samsung",
+    "Xiaomi Redmi",
+    "Realmi",
+    "Huawei",
+    "OPPO",
+    "Vivo",
+    "Nokia",
+    "ASUS",
+    "Sony",
+    "OnePlus",
   ];
   const productId = match.params.id;
   useEffect(() => {
@@ -73,6 +94,7 @@ const UpdateProduct = ({ history, match }) => {
       setPromotion(product.promotion);
       setCategory(product.category);
       setStock(product.Stock);
+      setImportPrice(product.importPrice);
       setSupplier(product.supplier);
       setOldImages(product.images);
     }
@@ -117,6 +139,7 @@ const UpdateProduct = ({ history, match }) => {
     myForm.set("info", info);
     myForm.set("supplier", supplier);
     myForm.set("brand", company);
+    myForm.set("importPrice", importPrice);
     images.forEach((image) => {
       myForm.append("images", image);
     });
@@ -125,6 +148,10 @@ const UpdateProduct = ({ history, match }) => {
       myForm.append("images", image);
     });
     dispatch(updateProduct(productId, myForm));
+    let bug = 0;
+    const statisForm = new FormData();
+    statisForm.set("budget", bug - importPrice * Stock);
+    dispatch(createStatistical(statisForm));
   };
   const updateProductImagesChange = (e) => {
     const files = Array.from(e.target.files);
@@ -153,7 +180,7 @@ const UpdateProduct = ({ history, match }) => {
           <Col md="8">
             <Card>
               <Card.Header>
-                <Card.Title as="h4">Chỉnh sửa sản phẩm</Card.Title>
+                <Card.Title as="h4">Chỉnh sửa sản phẩm {budget}</Card.Title>
               </Card.Header>
               <Card.Body>
                 <Form
@@ -183,13 +210,25 @@ const UpdateProduct = ({ history, match }) => {
                         ></Form.Control>
                       </Form.Group>
                     </Col>
-                    <Col className="pr-1" md="3">
+                    <Col className="pr-1" md="2">
                       <Form.Group>
                         <label>Khuyến mãi ( % )</label>
                         <Form.Control
                           // defaultValue={name}
                           defaultValue={promotion}
                           placeholder="Nhập % khuyến mãi"
+                          type="text"
+                          onChange={(e) => setPromotion(e.target.value)}
+                        ></Form.Control>
+                      </Form.Group>
+                    </Col>
+                    <Col className="pr-1" md="2">
+                      <Form.Group>
+                        <label>Giá nhập</label>
+                        <Form.Control
+                          disabled
+                          // defaultValue={name}
+                          defaultValue={importPrice}
                           type="text"
                           onChange={(e) => setPromotion(e.target.value)}
                         ></Form.Control>

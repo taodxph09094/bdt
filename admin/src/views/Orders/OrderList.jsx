@@ -59,7 +59,7 @@ const OrderList = ({ history, match }) => {
       dispatch({ type: DELETE_ORDER_RESET });
     }
 
-    dispatch(getAllOrders(dateFind, monAndDate));
+    dispatch(getAllOrders(monAndDate));
   }, [
     dispatch,
     alert,
@@ -105,7 +105,7 @@ const OrderList = ({ history, match }) => {
       minWidth: 100,
       flex: 0.3,
       cellClassName: (params) => {
-        return params.getValue(params.id, "status") === "Đã giao hàng"
+        return params.getValue(params.id, "status") === "Đã hoàn thành"
           ? "greenColor"
           : "redColor";
       },

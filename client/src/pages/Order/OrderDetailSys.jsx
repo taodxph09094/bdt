@@ -99,7 +99,7 @@ const OrderDetailSys = ({ match }) => {
                       <p
                         className={
                           order.orderStatus &&
-                          order.orderStatus === "Đã giao hàng"
+                          order.orderStatus === "Đã hoàn thành"
                             ? "greenColor"
                             : "redColor"
                         }

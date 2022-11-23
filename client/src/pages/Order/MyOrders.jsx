@@ -27,7 +27,7 @@ const MyOrders = () => {
       minWidth: 100,
       flex: 0.5,
       cellClassName: (params) => {
-        return params.getValue(params.id, "status") === "Đã giao hàng"
+        return params.getValue(params.id, "status") === "Đã hoàn thành"
           ? "greenColor"
           : "redColor";
       },
@@ -73,7 +73,7 @@ const MyOrders = () => {
         itemsQty: item.orderItems.length,
         id: item._id,
         status: item.orderStatus,
-        amount: item.totalPrice,
+        amount: item.totalPrice * 23000,
       });
     });
 

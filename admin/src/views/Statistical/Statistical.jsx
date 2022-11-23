@@ -57,13 +57,18 @@ const Statistical = ({ history }) => {
                   <div className="wCard">
                     <p className="card-category">Tổng doanh thu</p>
                     <Card.Title as="h4">
-                      {formatCurrency(
+                      {/* {formatCurrency(
                         totalAmountCash + totalAmount * 23000 + "",
                         0,
                         3,
                         ",",
                         "."
-                      ) + " đ"}
+                      ) + " đ"} */}
+
+                      {new Intl.NumberFormat("vi-VN", {
+                        style: "currency",
+                        currency: "VND",
+                      }).format(totalAmountCash + totalAmount * 23000)}
                     </Card.Title>
                   </div>
                 </Col>
@@ -99,13 +104,17 @@ const Statistical = ({ history }) => {
                     <div className="wCard">
                       <p className="card-category">Doanh số bán online</p>
                       <Card.Title as="h4">
-                        {formatCurrency(
+                        {/* {formatCurrency(
                           totalAmount * 23000 + "",
                           0,
                           3,
                           ",",
                           "."
-                        ) + " đ"}
+                        ) + " đ"} */}
+                        {new Intl.NumberFormat("vi-VN", {
+                          style: "currency",
+                          currency: "VND",
+                        }).format(totalAmount * 23000)}
                       </Card.Title>
                     </div>
                   </Col>
@@ -122,9 +131,13 @@ const Statistical = ({ history }) => {
                     <div className="wCard">
                       <p className="card-category">Doanh số offline</p>
                       <Card.Title as="h4">
-                        {" "}
+                        {/* {" "}
                         {formatCurrency(totalAmountCash + "", 0, 3, ",", ".") +
-                          " đ"}
+                          " đ"} */}
+                        {new Intl.NumberFormat("vi-VN", {
+                          style: "currency",
+                          currency: "VND",
+                        }).format(totalAmountCash)}
                       </Card.Title>
                     </div>
                   </Col>

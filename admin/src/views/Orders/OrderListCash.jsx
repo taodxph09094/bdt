@@ -87,7 +87,7 @@ const OrderListCash = ({ history }) => {
       minWidth: 100,
       flex: 0.3,
       cellClassName: (params) => {
-        return params.getValue(params.id, "status") === "Đã giao hàng"
+        return params.getValue(params.id, "status") === "Đã hoàn thành"
           ? "greenColor"
           : "redColor";
       },

@@ -13,9 +13,12 @@ const Menu = ({ user }) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-3">
-            <div className="header__logo">
-              <a href="./">
-                <img src="img/logo.png" alt="" />
+            <div className="header__logo bullStore">
+              <a href="/">
+                <img
+                  src="https://cf.shopee.vn/file/328774435b76365f0ca952df04285c6a"
+                  alt=""
+                />
               </a>
             </div>
           </div>

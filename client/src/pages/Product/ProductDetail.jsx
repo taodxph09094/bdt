@@ -178,22 +178,32 @@ const ProductDetail = ({ match }) => {
                     </div>
                   </div>
                 </div>
-                <h4>
+                <h4 className="priceHhh">
                   <del>
                     {product.promotion == 0 ? (
                       <p></p>
                     ) : (
-                      formatCurrency(product.price) + " đ"
+                      new Intl.NumberFormat("vi-VN", {
+                        style: "currency",
+                        currency: "VND",
+                      }).format(product.price)
+                      // formatCurrency(product.price) + " đ"
                     )}
                   </del>
                 </h4>
                 <div className="product__details__price">
-                  {formatCurrency(
+                  {/* {formatCurrency(
                     `${
                       product.price - (product.price * product.promotion) / 100
                     }`
                   )}{" "}
-                  đ
+                  đ */}
+                  {new Intl.NumberFormat("vi-VN", {
+                    style: "currency",
+                    currency: "VND",
+                  }).format(
+                    product.price - (product.price * product.promotion) / 100
+                  )}
                 </div>
                 {product.Stock == 0 ? (
                   <div className="">Sản phẩm này đã hết hàng</div>
