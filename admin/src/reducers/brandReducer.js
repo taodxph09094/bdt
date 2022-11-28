@@ -28,7 +28,7 @@ export const newBrandReducer = (state = { brand: {} }, action) => {
     case CREATE_BRAND_SUCCESS:
       return {
         loading: false,
-        success: action.payload.success,
+        success: action.payload,
         brand: action.brand,
       };
 

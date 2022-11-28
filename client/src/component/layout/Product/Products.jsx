@@ -9,17 +9,17 @@ import Pagination from "react-js-pagination";
 import ProductCard from "../../../pages/Home/ProductCard";
 
 const categories = [
-  "Điện thoại",
-  "Laptop",
-  "Máy tính bảng",
-  "Tai nghe",
-  "Loa",
-  "Đồng hồ",
-  "Phụ kiện",
-  "Màn hình",
-  "PC",
-  "Thu cũ",
-  "Hàng cũ",
+  "Apple",
+  "Samsung",
+  "Xiaomi Redmi",
+  "Realmi",
+  "Huawei",
+  "OPPO",
+  "Vivo",
+  "Nokia",
+  "ASUS",
+  "Sony",
+  "OnePlus",
 ];
 const Products = ({ match }) => {
   const dispatch = useDispatch();

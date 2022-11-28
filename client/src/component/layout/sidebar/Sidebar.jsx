@@ -42,37 +42,37 @@ const Sidebar = ({ match }) => {
               </div>
               <ul>
                 <li>
-                  <Link to="#">Applei</Link>
+                  <Link to="/products?category=Apple#">Apple</Link>
                 </li>
                 <li>
-                  <Link to="#">Samsung</Link>
+                  <Link to="/products?category=Samsung#">Samsung</Link>
                 </li>
                 <li>
-                  <Link to="#">Xiaomi Redmi</Link>
+                  <Link to="/products?category=Xiaomi#">Xiaomi Redmi</Link>
                 </li>
                 <li>
-                  <Link to="#">Realmi</Link>
+                  <Link to="/products?category=Realmi#">Realmi</Link>
                 </li>
                 <li>
-                  <Link to="#">Huawei</Link>
+                  <Link to="/products?category=Huawei#">Huawei</Link>
                 </li>
                 <li>
-                  <Link to="#">OPPO</Link>
+                  <Link to="/products?category=OPPO#">OPPO</Link>
                 </li>
                 <li>
-                  <Link to="#">Vivo</Link>
+                  <Link to="/products?category=Vivo#">Vivo</Link>
                 </li>
                 <li>
-                  <Link to="#">Nokia</Link>
+                  <Link to="/products?category=Nokia#">Nokia</Link>
                 </li>
                 <li>
-                  <Link to="#">ASUS</Link>
+                  <Link to="/products?category=ASUS#">ASUS</Link>
                 </li>
                 <li>
-                  <Link to="#">Sony</Link>
+                  <Link to="/products?category=Sony#">Sony</Link>
                 </li>
                 <li>
-                  <Link to="#">OnePlus</Link>
+                  <Link to="/products?category=OnePlus#">OnePlus</Link>
                 </li>
               </ul>
             </div>

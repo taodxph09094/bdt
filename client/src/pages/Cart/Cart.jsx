@@ -29,7 +29,6 @@ const Cart = ({ history }) => {
   useEffect(() => {
     dispatch(getCoupon());
   }, [dispatch, alert, history]);
-  console.log(coupon);
   useEffect(() => {
     // dispatch(getCoupon());
     if (valueCoupon === "GIAMGIA1") {
@@ -61,7 +60,7 @@ const Cart = ({ history }) => {
                 0
               )
             );
-      }, setShippingPrice(cartItems.reduce((acc, item) => acc + item.quantity * item.price - (item.price * item.promotion) / 100, 0) > 20000000 ? 0 : 30000));
+      }, setShippingPrice(cartItems.reduce((acc, item) => acc + item.quantity * item.price - (item.price * item.promotion) / 100, 0) >= 20000000 ? 0 : 30000));
   });
   const increaseQuantity = (id, quantity, stock) => {
     const newQty = quantity + 1;
@@ -242,8 +241,8 @@ const Cart = ({ history }) => {
                     <li>
                       Mã giảm giá{" "}
                       <span>
-                        {valueCoupon}
-                        {/* {formatCurrency(coupon + "", 0, 3, ",", ".") + " đ"} */}
+                        {/* {coupon} */}
+                        {formatCurrency(coupon + "", 0, 3, ",", ".") + " đ"}
                       </span>
                     </li>
                     <li>
@@ -256,6 +255,22 @@ const Cart = ({ history }) => {
                           : formatCurrency(
                               `${totalPrice + shippingPrice}`
                             )}{" "} */}
+                        <del className="priceFirst">
+                          {coupon > 0 &&
+                            formatCurrency(
+                              cartItems.reduce(
+                                (acc, item) =>
+                                  acc +
+                                  (item.quantity * item.price -
+                                    (item.price * item.promotion) / 100),
+                                0
+                              ) + "",
+                              0,
+                              3,
+                              ",",
+                              "."
+                            ) + " đ"}
+                        </del>
                         {formatCurrency(`${totalPrice + shippingPrice}`)} đ
                       </span>
                     </li>

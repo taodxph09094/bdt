@@ -260,3 +260,8 @@
   .paymentCash{
     margin-left: 15;
   } */
+  .priceFirst{
+    color: #000;
+    margin-right:10px;
+    font-size: 14px;
+  }

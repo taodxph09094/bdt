@@ -102,10 +102,10 @@ const CreateBrand = ({ history }) => {
                     </Col>
                     <Col className="px-1" md="4">
                       <Form.Group>
-                        <label>Thành phố</label>
+                        <label>Tên đường</label>
                         <Form.Control
                           // value={Stock}
-                          placeholder="Chọn thành phố"
+                          placeholder="Nhập tên đường"
                           type="text"
                           required
                           onChange={(e) => setStreet(e.target.value)}
@@ -129,7 +129,7 @@ const CreateBrand = ({ history }) => {
                     variant="info"
                     disabled={loading ? true : false}
                   >
-                    Tạo sản phẩm
+                    Thêm nhà cung cấp
                   </Button>
                   <div className="clearfix"></div>
                 </Form>
