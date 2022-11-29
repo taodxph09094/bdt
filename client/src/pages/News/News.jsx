@@ -23,9 +23,9 @@ const News = () => {
       <Menu />
       <section
         className="breadcrumb-section set-bg"
-        data-setbg="img/breadcrumb.jpg"
+        data-setbg="https://thumbs.dreamstime.com/b/super-sale-phone-banner-mobile-clearance-sale-discount-poster-smartphone-sale-marketing-special-offer-promotion-85976700.jpg"
         style={{
-          backgroundImage: `url("img/breadcrumb.jpg")`,
+          backgroundImage: `url("https://thumbs.dreamstime.com/b/super-sale-phone-banner-mobile-clearance-sale-discount-poster-smartphone-sale-marketing-special-offer-promotion-85976700.jpg")`,
         }}
       >
         <div className="container">

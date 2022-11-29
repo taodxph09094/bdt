@@ -61,16 +61,16 @@ const Products = ({ match }) => {
       <Sideb />
       <section
         className="breadcrumb-section set-bg"
-        data-setbg="img/breadcrumb.jpg"
+        // data-setbg="img/breadcrumb.jpg"
         style={{
-          backgroundImage: `url("img/breadcrumb.jpg")`,
+          backgroundImage: `url("https://thumbs.dreamstime.com/b/super-sale-phone-banner-mobile-clearance-sale-discount-poster-smartphone-sale-marketing-special-offer-promotion-85976700.jpg")`,
         }}
       >
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center">
               <div className="breadcrumb__text">
-                <h2>Organi Shop</h2>
+                <h2>Bull Store</h2>
                 <div className="breadcrumb__option">
                   <a href="/">Home</a>
                   <span>Shop</span>

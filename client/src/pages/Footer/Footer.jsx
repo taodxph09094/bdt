@@ -7,15 +7,18 @@ const Footer = () => {
         <div className="row">
           <div className="col-lg-3 col-md-6 col-sm-6">
             <div className="footer__about">
-              <div className="footer__about__logo">
-                <a href="./index.html">
-                  <img src="img/logo.png" alt="" />
+              <div className="footer__about__logo bullStore">
+                <a href="/">
+                  <img
+                    src="https://cf.shopee.vn/file/328774435b76365f0ca952df04285c6a"
+                    alt=""
+                  />
                 </a>
               </div>
               <ul>
                 <li>Địa chỉ: Hà Nội</li>
-                <li>Số điện thoại: +65 11.188.888</li>
-                <li>Email: hello@colorlib.com</li>
+                <li>Số điện thoại: 0339563502</li>
+                <li>Email: dungnguyenvan1608@gmail.com</li>
               </ul>
             </div>
           </div>
@@ -57,10 +60,10 @@ const Footer = () => {
               <div className="footer__copyright__text">
                 <p>
                   {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-                  Copyright © All rights reserved | This template is made with{" "}
+                  Copyright © All rights reserved{" "}
                   <i className="fa fa-heart" aria-hidden="true" /> by{" "}
-                  <a href="https://colorlib.com" target="_blank">
-                    Colorlib
+                  <a href="https://www.facebook.com/ngdung1608" target="_blank">
+                    DungNguyen
                   </a>
                   {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
                 </p>

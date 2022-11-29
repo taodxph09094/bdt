@@ -24,17 +24,7 @@ const NewProduct = () => {
             <div className="section-title">
               <h2>Sản phẩm mới</h2>
             </div>
-            <div className="featured__controls">
-              <ul>
-                <li className="active" data-filter="*">
-                  Tất cả
-                </li>
-                <li data-filter=".oranges">Điện thoại</li>
-                <li data-filter=".fresh-meat">Máy tính</li>
-                <li data-filter=".vegetables">Máy ảnh</li>
-                <li data-filter=".fastfood">Phụ kiện</li>
-              </ul>
-            </div>
+            <div className="featured__controls"></div>
           </div>
         </div>
         <div className="row">
