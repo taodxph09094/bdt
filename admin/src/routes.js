@@ -27,12 +27,12 @@ const dashboardRoutes = [
     component: Icons,
     layout: "/admin",
   },
-  {
-    path: "/banner",
-    name: "Quản lý banner",
-    icon: "nc-icon nc-album-2",
-    layout: "/admin",
-  },
+  // {
+  //   path: "/banner",
+  //   name: "Quản lý banner",
+  //   icon: "nc-icon nc-album-2",
+  //   layout: "/admin",
+  // },
   {
     path: "/orders",
     name: "Danh sách đơn hàng",
@@ -51,12 +51,12 @@ const dashboardRoutes = [
     icon: "nc-icon nc-bullet-list-67",
     layout: "/admin",
   },
-  {
-    path: "/coupons",
-    name: "Quản lý Vourcher",
-    icon: "nc-icon nc-money-coins",
-    layout: "/admin",
-  },
+  // {
+  //   path: "/coupons",
+  //   name: "Quản lý Vourcher",
+  //   icon: "nc-icon nc-money-coins",
+  //   layout: "/admin",
+  // },
   {
     path: "/feedbacks",
     name: "Danh sách góp ý",

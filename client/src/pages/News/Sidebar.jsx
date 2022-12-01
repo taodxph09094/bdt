@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
-const Sidebar = ({ newFeed, history }) => {
+const Sidebar = ({ newFeed }) => {
+  const cate = ["Tin tức", "Công nghệ", "Đời sống"];
   const [keyword, setKeyword] = useState("");
-
+  let history = useHistory();
   const searchSubmitHandler = (e) => {
     e.preventDefault();
     if (keyword.trim()) {
-      history.push(`/news/${keyword}`);
+      history.push(`/newFeeds/${keyword}`);
     } else {
-      history.push("/news");
+      history.push("/newFeeds");
     }
   };
   return (
@@ -29,9 +31,12 @@ const Sidebar = ({ newFeed, history }) => {
               <li>
                 <a href="#">Tất cả</a>
               </li>
-              <li>
-                <a href="#">{newFeed.category}</a>
-              </li>
+              {cate &&
+                cate.map((newFeed) => (
+                  <li>
+                    <a href="#">{newFeed}</a>
+                  </li>
+                ))}
             </ul>
           </div>
         </div>

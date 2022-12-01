@@ -53,10 +53,8 @@ const NewFeedDetails = ({ match }) => {
       <section className="blog spad">
         <div className="container">
           <div className="row">
-            {newFeeds &&
-              newFeeds.map((newFeed) => (
-                <Sidebar key={newFeed._id} newFeed={newFeed} />
-              ))}
+            <Sidebar />
+
             <div className="col-lg-8 col-md-7 order-md-1 order-1">
               <div className="blog__details__text">
                 <h2>{newFeed.title}</h2>

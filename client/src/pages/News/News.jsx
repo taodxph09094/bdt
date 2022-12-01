@@ -48,10 +48,7 @@ const News = () => {
       <section className="blog spad">
         <div className="container">
           <div className="row">
-            {newFeeds &&
-              newFeeds.map((newFeed) => (
-                <Sidebar key={newFeed._id} newFeed={newFeed} />
-              ))}
+            <Sidebar />
             <div className="col-lg-8 col-md-7">
               <div className="row">
                 {newFeeds &&
